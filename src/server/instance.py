@@ -4,6 +4,10 @@ import flask.scaffold
 flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
 import flask_restful
 
+import werkzeug
+from werkzeug.utils import cached_property
+werkzeug.cached_property = cached_property
+
 from flask import Flask
 from flask_restplus import Api
 
